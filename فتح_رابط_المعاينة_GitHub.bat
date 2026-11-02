@@ -1,20 +1,19 @@
 @echo off
 chcp 65001 > nul
-title معاينة المنظومات على GitHub Pages
+title معاينة موقع طريق أوباري – غات على GitHub Pages
 echo ===================================================================
-echo     البوابة الإلكترونية الموحدة - دولة ليبيا
+echo     مشروع صيانة وتطوير طريق أوباري – غات
+echo     جهاز تنفيذ مشروعات المواصلات - دولة ليبيا
 echo ===================================================================
 echo.
-echo  [1] مشروع صيانة وتطوير طريق أوباري – غات (جهاز تنفيذ مشروعات المواصلات):
-echo      https://bika20032003-sudo.github.io/-/road/
+echo  رابط الموقع على GitHub Pages:
+echo      https://bika20032003-sudo.github.io/yahya/
 echo.
-echo  [2] منظومة وزارة الداخلية الموحدة (مديرية أمن أوباري):
-echo      https://bika20032003-sudo.github.io/-/
+echo  مستودع المشروع على GitHub:
+echo      https://github.com/bika20032003-sudo/yahya
 echo.
 echo ===================================================================
 echo.
 echo  جاري فتح موقع طريق أوباري – غات في المتصفح...
-start https://bika20032003-sudo.github.io/-/road/
-timeout /t 2 > nul
-start https://bika20032003-sudo.github.io/-/
-timeout /t 2 > nul
+start https://bika20032003-sudo.github.io/yahya/
+timeout /t 3 > nul
