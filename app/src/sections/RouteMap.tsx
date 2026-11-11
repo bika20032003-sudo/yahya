@@ -40,25 +40,25 @@ export default function RouteMap() {
         );
       });
 
-      tl.fromTo('.route-bg', { scale: 1.15, yPercent: -4 }, { scale: 1.02, yPercent: 4, ease: 'none', duration: 4 }, 0);
+      tl.fromTo('.route-bg', { scale: 1.05, yPercent: -2 }, { scale: 1.0, yPercent: 2, ease: 'none', duration: 4 }, 0);
     }, root);
     return () => ctx.revert();
   }, []);
 
   return (
     <section ref={root} id="route" className="relative h-screen overflow-hidden">
-      <div className="cine-bg route-bg" style={{ backgroundImage: `url(${assetUrl('images/acacus.webp')})` }} />
+      <div className="cine-bg route-bg" style={{ backgroundImage: `url(${assetUrl('images/acacus.webp')})`, backgroundPosition: 'center center', backgroundSize: 'cover' }} />
       <div className="cine-veil" />
 
       <div className="relative z-10 flex h-full flex-col justify-center px-5 md:px-12">
         <div className="mx-auto w-full max-w-6xl">
-          <p className="mb-2 md:mb-4 text-xs md:text-sm font-bold tracking-normal text-[var(--amber)] flex items-center gap-2">
+          <p className="mb-2 md:mb-4 text-xs md:text-sm font-bold tracking-normal text-[var(--amber)] flex items-center gap-2 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
             <span>٠٣</span>
             <span className="opacity-40">—</span>
             <span>المسار</span>
           </p>
-          <h2 className="font-display mb-6 md:mb-20 text-2xl sm:text-3xl md:text-6xl text-[var(--bone)] leading-tight">
-            من واحة أوباري إلى سفوح أكاكوس
+          <h2 className="font-display mb-6 md:mb-20 text-2xl sm:text-3xl md:text-6xl text-[var(--bone)] leading-tight drop-shadow-[0_4px_24px_rgba(0,0,0,0.9)]">
+            من واحة أوباري إلى مدينة غات
           </h2>
 
           {/* المسار لسطح المكتب (شاشات متوسطة وكبيرة) */}
@@ -71,12 +71,12 @@ export default function RouteMap() {
             {POINTS.map((p, i) => (
               <div
                 key={i}
-                className="route-point absolute top-1/2 flex w-44 -translate-y-1/2 flex-col items-center text-center"
+                className="route-point absolute top-1/2 flex w-44 -translate-y-1/2 flex-col items-center text-center drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)]"
                 style={{ right: `calc(${p.at}% - 5.5rem)`, opacity: 0 }}
               >
-                <span className="route-dot block h-3.5 w-3.5 rounded-full bg-[var(--amber)]" />
+                <span className="route-dot block h-3.5 w-3.5 rounded-full bg-[var(--amber)] shadow-[0_0_12px_rgba(232,147,44,0.6)]" />
                 <span className="mt-4 font-display text-xl text-[var(--bone)]">{p.name}</span>
-                <span className="mt-1 text-xs font-light leading-relaxed text-[var(--bone)]/70">
+                <span className="mt-1 text-xs font-light leading-relaxed text-[var(--bone)]/90">
                   {p.note}
                 </span>
               </div>
@@ -91,21 +91,21 @@ export default function RouteMap() {
               style={{ transform: 'scaleY(0)' }}
             />
 
-            <div className="space-y-4">
+            <div className="space-y-4 bg-[#0a0a0b]/60 p-4 rounded-2xl backdrop-blur-sm border border-[var(--bone)]/10 shadow-2xl">
               {POINTS.map((p, i) => (
                 <div
                   key={i}
-                  className="route-point relative pr-9 flex flex-col"
+                  className="route-point relative pr-9 flex flex-col drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]"
                   style={{ opacity: 0 }}
                 >
-                  <span className="route-dot absolute right-[8px] top-1.5 h-3.5 w-3.5 rounded-full bg-[var(--amber)]" />
+                  <span className="route-dot absolute right-[8px] top-1.5 h-3.5 w-3.5 rounded-full bg-[var(--amber)] shadow-[0_0_10px_rgba(232,147,44,0.7)]" />
                   <div className="flex items-center gap-2">
                     <h3 className="font-display text-base text-[var(--bone)]">{p.name}</h3>
-                    <span className="text-[10px] font-semibold text-[var(--amber)] num-latin bg-[var(--amber)]/10 px-1.5 py-0.5 rounded border border-[var(--amber)]/20">
+                    <span className="text-[10px] font-semibold text-[var(--amber)] num-latin bg-[var(--amber)]/20 px-1.5 py-0.5 rounded border border-[var(--amber)]/35">
                       {p.km}
                     </span>
                   </div>
-                  <p className="mt-0.5 text-[11px] font-light leading-relaxed text-[var(--bone)]/75">
+                  <p className="mt-0.5 text-[11px] font-light leading-relaxed text-[var(--bone)]/90">
                     {p.note}
                   </p>
                 </div>
