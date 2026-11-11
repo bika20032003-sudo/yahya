@@ -9,7 +9,8 @@
     
     <!-- تحميل سريع ومسبق للصور الأساسية (LCP Optimization) -->
     <link rel="preload" as="image" href="./images/logo.webp" type="image/webp" />
-    <link rel="preload" as="image" href="./images/hero.webp" type="image/webp" fetchpriority="high" />
+    <link rel="preload" as="image" href="./images/hero-mobile.webp" type="image/webp" media="(max-width: 768px)" fetchpriority="high" />
+    <link rel="preload" as="image" href="./images/hero.webp" type="image/webp" media="(min-width: 769px)" fetchpriority="high" />
 
     <!-- اتصالات مسبقة لتسريع جلب الخطوط من أول طلب -->
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />

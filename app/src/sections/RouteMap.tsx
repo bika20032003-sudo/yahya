@@ -90,21 +90,22 @@ export default function RouteMap() {
               style={{ transform: 'scaleY(0)' }}
             />
 
-            <div className="space-y-4 bg-[#0a0a0b]/60 p-4 rounded-2xl backdrop-blur-sm border border-[var(--bone)]/10 shadow-2xl">
+            {/* نقاط المسار مباشرة على الصورة بدون أي بطاقة أو قائمة عائمة */}
+            <div className="space-y-5 py-2">
               {POINTS.map((p, i) => (
                 <div
                   key={i}
-                  className="route-point relative pr-9 flex flex-col drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]"
+                  className="route-point relative pr-9 flex flex-col drop-shadow-[0_2px_10px_rgba(0,0,0,0.95)]"
                   style={{ opacity: 0 }}
                 >
-                  <span className="route-dot absolute right-[8px] top-1.5 h-3.5 w-3.5 rounded-full bg-[var(--amber)] shadow-[0_0_10px_rgba(232,147,44,0.7)]" />
+                  <span className="route-dot absolute right-[8px] top-1.5 h-3.5 w-3.5 rounded-full bg-[var(--amber)] shadow-[0_0_12px_rgba(232,147,44,0.9)]" />
                   <div className="flex items-center gap-2">
-                    <h3 className="font-display text-base text-[var(--bone)]">{p.name}</h3>
-                    <span className="text-[10px] font-semibold text-[var(--amber)] num-latin bg-[var(--amber)]/20 px-1.5 py-0.5 rounded border border-[var(--amber)]/35">
+                    <h3 className="font-display text-base text-[var(--bone)] drop-shadow-[0_2px_8px_rgba(0,0,0,1)]">{p.name}</h3>
+                    <span className="text-[10px] font-bold text-[var(--amber)] num-latin bg-black/50 px-1.5 py-0.5 rounded border border-[var(--amber)]/40 shadow-md">
                       {p.km}
                     </span>
                   </div>
-                  <p className="mt-0.5 text-[11px] font-light leading-relaxed text-[var(--bone)]/90">
+                  <p className="mt-0.5 text-[11px] font-medium leading-relaxed text-[var(--bone)]/95 drop-shadow-[0_2px_6px_rgba(0,0,0,1)]">
                     {p.note}
                   </p>
                 </div>
