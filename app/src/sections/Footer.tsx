@@ -29,7 +29,7 @@ export default function Footer() {
         {/* زر العودة للبوابة الإخبارية */}
         <div className="flex flex-col items-center gap-2 md:items-end">
           <a
-            href="https://bika20032003-sudo.github.io/ubari.com/"
+            href="https://ubarighat.ly/"
             className="group inline-flex items-center gap-3 rounded-full border border-[var(--amber)]/45 bg-[var(--amber)]/10 px-6 py-2.5 text-xs sm:text-sm font-semibold text-[var(--amber)] transition-all duration-300 hover:border-[var(--amber)] hover:bg-[var(--amber)] hover:text-[#0a0a0b] hover:shadow-[0_0_24px_rgba(232,147,44,0.35)] active:scale-95"
           >
             <svg
@@ -42,7 +42,7 @@ export default function Footer() {
             </svg>
             <span>العودة للبوابة الإخبارية</span>
           </a>
-          <span className="text-[10px] text-[var(--mute)]">البوابة الرسمية لمتابعة مشاريع وأخبار بلدية أوباري</span>
+          <span className="text-[10px] text-[var(--mute)]">ubarighat.ly — البوابة الإخبارية الرسمية للمشروع</span>
         </div>
 
         <div className="text-center md:text-left">
