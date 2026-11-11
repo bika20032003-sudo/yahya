@@ -22,8 +22,8 @@ export default function Hero() {
       });
 
       // حركة خلفية سينمائية ناعمة
-      tl.fromTo('.hero-bg', { scale: 1.25 }, { scale: 1.0, ease: 'none' }, 0)
-        .fromTo('.hero-veil-dark', { opacity: 0.45 }, { opacity: 0.15, ease: 'none' }, 0)
+      tl.fromTo('.hero-bg', { scale: 1.06 }, { scale: 1.0, ease: 'none' }, 0)
+        .fromTo('.hero-veil-dark', { opacity: 0.40 }, { opacity: 0.12, ease: 'none' }, 0)
         // انتقال المحتوى كاملاً لأعلى مع التلاشي السلس لمنع أي تداخل بين العناصر
         .to('.hero-content', { yPercent: -35, opacity: 0, ease: 'power1.in' }, 0.05)
         .to('.hero-cue', { opacity: 0, ease: 'none' }, 0.05);
@@ -44,9 +44,16 @@ export default function Hero() {
 
   return (
     <section ref={root} id="hero" className="relative h-screen overflow-hidden">
-      <div className="cine-bg hero-bg" style={{ backgroundImage: `url(${assetUrl('images/hero.webp')})` }} />
+      <div
+        className="cine-bg hero-bg"
+        style={{
+          backgroundImage: `url(${assetUrl('images/hero.webp')})`,
+          backgroundPosition: 'center 45%',
+          backgroundSize: 'cover',
+        }}
+      />
       <div className="cine-veil" />
-      <div className="hero-veil-dark absolute inset-0 bg-[var(--ink)] opacity-[0.45]" />
+      <div className="hero-veil-dark absolute inset-0 bg-[var(--ink)] opacity-[0.40]" />
 
       <div className="hero-content relative z-10 flex h-full flex-col items-center justify-center px-4 sm:px-6 text-center max-w-5xl mx-auto">
         <div className="hero-kicker mb-3 md:mb-5 inline-flex items-center gap-2 rounded-full border border-[var(--amber)]/35 bg-[#0a0a0b]/80 px-3 py-1.5 sm:px-3.5 backdrop-blur-md shadow-[0_2px_12px_rgba(232,147,44,0.18)] max-w-[92vw]">
