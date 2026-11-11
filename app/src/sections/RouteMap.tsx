@@ -6,10 +6,9 @@ import { assetUrl } from '@/lib/utils';
 gsap.registerPlugin(ScrollTrigger);
 
 const POINTS = [
-  { name: 'أوباري', note: 'نقطة البداية — قرب حقل الشرارة النفطي', at: 8, km: 'كم ٠' },
-  { name: 'العوينات', note: 'عبور صحراء فزان المفتوحة', at: 36, km: 'كم ١٨٠' },
-  { name: 'غات', note: 'بوابة الجنوب الغربي — جبال أكاكوس', at: 68, km: 'كم ٣١٠' },
-  { name: 'الحدود الجزائرية', note: 'ربط تجاري وخدمي عبر الحدود', at: 92, km: 'كم ٣٦٠' },
+  { name: 'أوباري', note: 'نقطة البداية — قرب حقل الشرارة النفطي', at: 10, km: 'كم ٠' },
+  { name: 'العوينات', note: 'عبور صحراء فزان المفتوحة', at: 50, km: 'كم ١٨٠' },
+  { name: 'مدينة غات', note: 'نهاية المسار — بوابة الجنوب الغربي والقلعة التاريخية', at: 90, km: 'كم ٣٦٠' },
 ];
 
 export default function RouteMap() {
@@ -113,9 +112,6 @@ export default function RouteMap() {
             </div>
           </div>
 
-          <p className="mt-5 md:mt-14 max-w-md text-xs md:text-sm font-light leading-relaxed text-[var(--bone)]/60">
-            يتفرع من أوباري شمالاً الطريق نحو سبها ومرزق، ليشكّل المحور عقدةَ ربطٍ لكامل إقليم فزان.
-          </p>
         </div>
       </div>
     </section>
